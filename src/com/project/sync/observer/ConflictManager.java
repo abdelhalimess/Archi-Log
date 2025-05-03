@@ -27,6 +27,6 @@ public abstract class ConflictManager {
                 return resolution;
             }
         }
-        return ConflictResolution.CANCEL; // Default if no observer handles the conflict
+        return ConflictResolution.CANCEL;
     }
 }

@@ -30,13 +30,11 @@ public class DirectoryElement implements FileSystemElement {
 
     @Override
     public Date getLastModified() {
-        // Logic to return the last modified date (could be based on the last modified date of its children)
         return new Date();
     }
 
     @Override
     public boolean exists() {
-        // Logic to check if the directory exists
         return true;
     }
 
