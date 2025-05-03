@@ -1,4 +1,4 @@
-package new_profile;
+package com.project.new_profile;
 
 public class Main {
     public static void main(String[] args) {

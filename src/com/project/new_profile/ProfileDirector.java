@@ -1,4 +1,4 @@
-package new_profile;
+package com.project.new_profile;
 
 public class ProfileDirector {
     private ProfileBuilder builder;

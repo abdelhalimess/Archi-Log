@@ -12,19 +12,25 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
+import com.project.new_profile.Profile;
+import com.project.new_profile.ProfileXmlSerializer;
 import com.project.sync.adapter.WebDavDirectoryAdapter;
 import com.project.sync.adapter.WebDavFileAdapter;
-import com.project.sync.visitor.Result;
 
 public class SynchronizationVisitor extends ConflictManager implements SyncVisitor {
     private FileSystemElement sourceRoot;
     private FileSystemElement destRoot;
     private Profile profile;
+    private StringBuilder syncLog = new StringBuilder();
 
     public SynchronizationVisitor(FileSystemElement sourceRoot, FileSystemElement destRoot, Profile profile) {
         this.sourceRoot = sourceRoot;
         this.destRoot = destRoot;
         this.profile = profile;
+    }
+    
+    public StringBuilder getSyncLog() {
+        return syncLog;
     }
 
     @Override
@@ -119,5 +125,10 @@ public class SynchronizationVisitor extends ConflictManager implements SyncVisit
                 System.out.println("Conflict canceled.");
                 break;
         }
+    }
+    
+    public void finish(String syncFilePath) {
+        ProfileXmlSerializer serializer = new ProfileXmlSerializer();
+        serializer.serialize(profile, syncFilePath, syncLog);
     }
 }

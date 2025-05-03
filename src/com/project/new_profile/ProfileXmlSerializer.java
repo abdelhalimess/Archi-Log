@@ -1,7 +1,7 @@
-package new_profile;
+package com.project.new_profile;
 
 public class ProfileXmlSerializer {
-    public void serialize(Profile profile, String filePath) {
+	public void serialize(Profile profile, String filePath, StringBuilder syncLog) {
         StringBuilder xml = new StringBuilder();
         xml.append("<profile name=\"").append(profile.getName()).append("\">\n");
         xml.append("  <folders>\n");
@@ -10,7 +10,7 @@ public class ProfileXmlSerializer {
         xml.append("  </folders>\n");
         xml.append("  <synchronization>\n");
         
-        
+        xml.append(syncLog);
         
         xml.append("  </synchronization>\n");
         xml.append("</profile>");
