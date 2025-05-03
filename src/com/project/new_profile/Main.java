@@ -15,6 +15,6 @@ public class Main {
 
         ProfileXmlSerializer serializer = new ProfileXmlSerializer();
         String outputFile = args[0] + ".sync";
-        serializer.serialize(profile, outputFile);
+        serializer.serialize2(profile, outputFile);
     }
 }
