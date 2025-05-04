@@ -4,9 +4,9 @@
     <folderB>folderC</folderB>
   </folders>
   <synchronization>
-  <file>A</file>
-  <file>B</file>
-  <file>C</file>
+  <file path="Rapport/sybc.pdf" lastSync="2025-04-04"/>
+  <file path="Rapport/tets.pdf" lastSync="2025-04-04"/>
+  <file path="Rapport/44.pdf" lastSync="2025-04-04"/>
 
   </synchronization>
 </profile>
