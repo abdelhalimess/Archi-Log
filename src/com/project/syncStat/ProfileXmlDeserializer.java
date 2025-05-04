@@ -18,13 +18,27 @@ public class ProfileXmlDeserializer {
             String name = doc.getDocumentElement().getAttribute("name");
             String folderA = doc.getElementsByTagName("folderA").item(0).getTextContent();
             String folderB = doc.getElementsByTagName("folderB").item(0).getTextContent();
-
+            NodeList fileNodes = doc.getElementsByTagName("file");
+            StringBuilder registerBuilder = new StringBuilder();
+            
+            for (int i = 0; i < fileNodes.getLength(); i++) {
+                Node fileNode = fileNodes.item(i);
+                if (fileNode.getNodeType() == Node.ELEMENT_NODE) {
+                    String fileContent = fileNode.getTextContent().trim();
+                    if (!fileContent.isEmpty()) {
+                        registerBuilder.append(fileContent).append("\n");
+                    }
+                }
+            }
+            
+            String register = registerBuilder.toString().trim();
 
  
             return new ProfileBuilderImpl()
                     .setName(name)
                     .setFolderA(folderA)
                     .setFolderB(folderB)
+                    .setRegister(register)
                     .build();
 
         } catch (Exception e) {

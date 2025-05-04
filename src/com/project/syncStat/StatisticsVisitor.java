@@ -22,6 +22,8 @@ public class StatisticsVisitor implements ProfileVisitor {
 
         System.out.println("Source FolderA: " + profile.getFolderA());
         System.out.println("Target FolderB: " + profile.getFolderB());
+        System.out.println("Register : "  );
+        System.out.println(        profile.getRegister());
 
 
 

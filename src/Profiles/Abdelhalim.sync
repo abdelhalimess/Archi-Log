@@ -4,5 +4,9 @@
     <folderB>folderC</folderB>
   </folders>
   <synchronization>
+  <file>A</file>
+  <file>B</file>
+  <file>C</file>
+
   </synchronization>
 </profile>
