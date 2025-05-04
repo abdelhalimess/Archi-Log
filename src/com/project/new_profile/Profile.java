@@ -1,5 +1,7 @@
 package com.project.new_profile;
 
+import com.project.syncStat.ProfileVisitor;
+
 public class Profile {
     private String name;
     private String folderA;
@@ -17,6 +19,14 @@ public class Profile {
     public String getFolderA() { return folderA; }
     public String getFolderB() { return folderB; }
     public String getRegister(){return register;}
+
+
+    public void accept(ProfileVisitor visitor){
+        visitor.visitProfile(this);    
+    
+    };
+
+    
 
 
 }

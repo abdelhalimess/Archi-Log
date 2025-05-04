@@ -1,7 +1,7 @@
 <profile name="Mohamed">
   <folders>
-    <folderA>folderA</folderA>
-    <folderB>folderB</folderB>
+    <folderA>testa</folderA>
+    <folderB>testbb/sf</folderB>
   </folders>
   <synchronization>
   </synchronization>

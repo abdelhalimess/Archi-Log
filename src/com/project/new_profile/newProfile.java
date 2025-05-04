@@ -3,7 +3,7 @@ package com.project.new_profile;
 public class newProfile {
     public static void main(String[] args) {
         if (args.length != 3) {
-            System.err.println("Usage: java -cp . new_profile.Main <profile_name> <folderA> <folderB>");
+            System.err.println("Usage: java -cp . new_profile.newProfile <profile_name> <folderA> <folderB>");
             System.exit(1);
         }
 
